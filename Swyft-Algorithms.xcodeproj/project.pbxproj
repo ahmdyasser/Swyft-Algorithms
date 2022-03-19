@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		96F2637A27E5B9E6006B531B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2637927E5B9E6006B531B /* main.swift */; };
+		96F2638127E5BA2B006B531B /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2638027E5BA2B006B531B /* LinkedList.swift */; };
+		96F2638427E5BE65006B531B /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2638327E5BE65006B531B /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		96F2637627E5B9E6006B531B /* Swyft-Algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Swyft-Algorithms"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F2637927E5B9E6006B531B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		96F2638027E5BA2B006B531B /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		96F2638327E5BE65006B531B /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,18 @@
 			isa = PBXGroup;
 			children = (
 				96F2637927E5B9E6006B531B /* main.swift */,
+				96F2638227E5BDF8006B531B /* Sources */,
 			);
 			path = "Swyft-Algorithms";
+			sourceTree = "<group>";
+		};
+		96F2638227E5BDF8006B531B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				96F2638027E5BA2B006B531B /* LinkedList.swift */,
+				96F2638327E5BE65006B531B /* Node.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +134,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F2638427E5BE65006B531B /* Node.swift in Sources */,
+				96F2638127E5BA2B006B531B /* LinkedList.swift in Sources */,
 				96F2637A27E5B9E6006B531B /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
