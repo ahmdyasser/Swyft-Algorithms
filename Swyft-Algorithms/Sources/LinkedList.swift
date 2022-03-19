@@ -67,6 +67,56 @@ public struct LinkedList<Value> {
         //return the inserted note
         return node.next!
     }
+    
+    
+    //pop: returns the optional value of the popped node.
+    @discardableResult
+    public mutating func pop() -> Value? {
+        //the code inside defer got executed when the code exits its current scope
+        //in this case it is when the function pop() return.
+        defer {
+            //2: this is executed second
+            head = head?.next
+            if isEmpty {
+                tail = nil
+            }
+        }
+        //1: this is executed first
+        return head?.value
+    }
+    
+    @discardableResult
+    public mutating func removeLast() -> Value? {
+        guard let head = head else { return nil }
+        guard head.next != nil else { return pop() }
+        
+        var previous = head
+        var current = head
+        
+        while let next = current.next {
+            previous = current
+            current = next
+        }
+        previous.next = nil
+        tail = current
+        return current.value
+    }
+    
+    @discardableResult
+    public mutating func remove(after node: Node<Value>) -> Value? {
+        defer {
+            if node.next === tail {
+                tail = node
+            }
+            /*
+             instead of a -> b -> c
+             👇
+             a -> c
+             */
+            node.next = node.next?.next
+        }
+        return node.next?.value
+    }
 }
 
 extension LinkedList: CustomStringConvertible {
@@ -84,3 +134,6 @@ extension LinkedList: CustomStringConvertible {
 //append: O(1)
 //insert(after:): O(1)
 //node(at:): O(n)
+//pop: O(1)
+//removeLast: O(1)
+//remove(after:): O(1)
